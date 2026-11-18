@@ -187,6 +187,6 @@ I enjoy exploring new technologies and developing projects that combine software
 
 ---
 
-⭐ If you find this project interesting, consider giving the repository a star!
+⭐ If you find this project interesting, consider giving the repository a star!!
 
 **Built with ❤️ by Karan Deshmukh**
