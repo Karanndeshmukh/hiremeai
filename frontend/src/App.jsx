@@ -12,7 +12,7 @@ const projects = [
   {
     name: "CyberQuest",
     fullName: "CyberQuest",
-    repoUrl: "https://github.com/Karanndeshmukh/Karanndeshmukh/CyberQuest",
+    repoUrl: "https://github.com/Karanndeshmukh/CyberQuest",
   },
   {
     name: "DSA-Java",
@@ -40,7 +40,7 @@ const projects = [
 const profileLinks = [
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/karan-deshmukh-cse",
+    href: "https://www.linkedin.com/in/karan-deshmukh-cse/",
     initials: "in",
   },
   {
