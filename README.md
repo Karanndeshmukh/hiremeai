@@ -1,89 +1,192 @@
-#### HireMeAI — Karan's Personal AI Portfolio Assistant
+# HireMeAI — Karan's Personal AI Portfolio Assistant
 
-An interactive, macOS-inspired personal AI portfolio website built with **React**, **FastAPI**, and **Groq LLM**. Visitors and recruiters can explore Karan Deshmukh's projects through a desktop dock interface or chat directly with an AI assistant trained on his resume, GitHub repositories, and LeetCode profile. 
+An interactive, macOS-inspired personal AI portfolio website built using **React, FastAPI, and Groq LLM**.
 
-#### Live Demo
+HireMeAI allows visitors and recruiters to explore Karan Deshmukh's technical background, projects, skills, and achievements through an interactive desktop interface or by chatting directly with an AI-powered portfolio assistant.
 
-🔗 **[View Live Portfolio](YOUR_DEPLOYED_LINK_HERE)** *(Replace with your live Vercel/Render link after deployment)* 
+The assistant provides context-aware responses grounded in Karan's resume, GitHub repositories, and LeetCode profile.
 
-#### ✨ Key Features
+## 🌐 Live Demo
 
-* **macOS Desktop Experience:** Features a translucent menu bar with a live clock, desktop app shortcuts for LinkedIn, GitHub, and LeetCode, and a bottom project dock.
-* **Interactive AI Portfolio Assistant:** Powered by Groq LLM (llama-3.3-70b-versatile) with structured resume parsing via Pydantic and PyPDF.
-* **Live Profile Integration:** Automatically fetches recent public repositories from GitHub (@Karanndeshmukh) and problem-solving stats from LeetCode (@KaranDeshmukh).
-* **Light & Dark Mode:** Seamless theme switcher in the top menu bar with frosted-glass (backdrop-filter: blur) styling.
-* **Project Dock Shortcuts:** Quick-access folders in the dock that link directly to featured repositories like *Customer Churn Prediction*, *CyberQuest*, *DSA-Java*, and *ServiceNow Family Expense Management*.
+- **Live Portfolio:** https://hiremeai-three.vercel.app/
+- **Backend API:** https://hiremeai-o82y.onrender.com
+- **GitHub Repository:** https://github.com/Karanndeshmukh/hiremeai
 
-#### 🛠️ Tech Stack
+## Snapshot
+<img width="1912" height="957" alt="image" src="https://github.com/user-attachments/assets/0b24fcfe-ad15-4a39-a1b4-7c0247d003d4" />
 
-* **Frontend:** React, Vite, CSS3 (Glassmorphism & Responsive Layout)
-* **Backend:** Python, FastAPI, Uvicorn, Pydantic
-* **AI & Data:** Groq API, PyPDF, Requests
 
-#### 📂 Project Structure
+## ✨ Key Features
+
+### 🖥️ macOS-Inspired Desktop Interface
+- Minimal macOS-style desktop environment.
+- Translucent menu bar with a live clock.
+- Interactive desktop shortcuts for LinkedIn, GitHub, and LeetCode.
+- Bottom dock with quick-access project shortcuts.
+- Responsive layout with modern glassmorphism styling.
+
+### 🤖 AI-Powered Portfolio Assistant
+- Powered by Groq API using **Llama 3.3 70B Versatile**.
+- Interactive chat interface for recruiters and visitors.
+- Resume parsing using PyPDF.
+- Structured data validation using Pydantic.
+- Provides answers based on Karan's professional background and project information.
+
+### 🔗 Live Profile Integration
+- Fetches recent public repositories from GitHub.
+- Retrieves problem-solving statistics from LeetCode.
+- Provides quick access to professional profiles.
+
+### 🎨 Theme Customization
+- Light and dark mode support.
+- Frosted-glass UI using CSS backdrop filters.
+- Smooth and consistent visual experience.
+
+### 📁 Project Explorer
+Quick access to featured projects, including:
+- Customer Churn Prediction
+- CyberQuest
+- DSA-Java
+- ServiceNow Family Expense Management
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Frontend | React.js, Vite, JavaScript, CSS3 |
+| Backend | Python, FastAPI, Uvicorn |
+| AI / LLM | Groq API, Llama 3.3 70B Versatile |
+| Data Processing | PyPDF, Pydantic, Requests |
+| Deployment | Vercel, Render |
+| Version Control | Git, GitHub |
+
+## 📂 Project Structure
+
+```text
 hiremeai/
+│
 ├── backend/
-│   ├── main.py                     # FastAPI server, resume parser & Groq chat endpoint
-│   └── Karan_Deshmukh_Resume.pdf   # Source resume parsed at startup
+│   ├── main.py
+│   ├── requirements.txt
+│   └── Karan_Deshmukh_Resume.pdf
+│
 ├── frontend/
 │   ├── src/
-│   │   ├── App.jsx                 # macOS desktop UI, dock, theme toggle & chat state
-│   │   └── App.css                 # Light/dark wallpaper & frosted-glass styling
+│   │   ├── App.jsx
+│   │   └── App.css
 │   └── package.json
+│
 ├── pyproject.toml
 └── README.md
+```
 
-#### 🚀 Run Locally
+## 🚀 Getting Started
 
-#### 1. Clone the Repository
+Follow these steps to run HireMeAI locally.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Python 3.10+
+- Node.js and npm
+- Git
+- Groq API Key
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/Karanndeshmukh/hiremeai.git
 cd hiremeai
+```
 
-#### 2. Start the FastAPI Backend
+### 2. Set Up the Backend
+
+Navigate to the backend directory:
+
+```bash
 cd backend
-pip install fastapi uvicorn groq pypdf pydantic python-dotenv requests
+```
 
-Create a .env file inside backend/ and add your Groq API key: 
+Install the required dependencies:
 
-env
+```bash
+pip install -r requirements.txt
+```
 
+### 3. Configure Environment Variables
+
+Create a `.env` file inside the `backend/` directory and add your Groq API key:
+
+```env
 GROQ_API_KEY=your_groq_api_key_here
+```
 
-Use code with caution.
+Replace `your_groq_api_key_here` with your actual API key.
 
-Copy code text to clipboard.
+**Important:** Never commit your `.env` file or expose your API key publicly.
 
-Run the backend server: 
+### 4. Run the Backend Server
 
-bash
-
+```bash
 uvicorn main:app --reload
+```
 
-Use code with caution.
+The FastAPI backend will be available at:
 
-Copy code text to clipboard.
+http://127.0.0.1:8000
 
-The API will run at http://127.0.0.1:8000. 
+### 5. Set Up the Frontend
 
-#### 3. Start the React Frontend
+Open a new terminal and navigate to the frontend directory:
 
-Open a second terminal: 
-
-bash
-
+```bash
 cd frontend
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
+```
 
-Use code with caution.
+Open the following URL in your browser:
 
-Copy code text to clipboard.
+http://localhost:5173
 
-Open http://localhost:5173 in your browser. 
+## ⚙️ Deployment
 
-#### 📬 Connect With Me
+HireMeAI is deployed using:
 
-* **LinkedIn:** [linkedin.com/in/karan-deshmukh-cse](https://www.linkedin.com/in/karan-deshmukh-cse/)
-* **GitHub:** [github.com/Karanndeshmukh](https://github.com/Karanndeshmukh)
-* **LeetCode:** [leetcode.com/u/KaranDeshmukh](https://leetcode.com/u/KaranDeshmukh/)
-* **Email:** Karandeshmukh287@gmail.com
+- **Frontend:** Vercel
+- **Backend:** Render
+
+The frontend communicates with the deployed FastAPI backend, which handles resume processing and AI-powered chat requests.
+
+## 👨‍💻 About Me
+
+**Karan Deshmukh**
+
+B.Tech Computer Science and Engineering student passionate about software development, data analytics, artificial intelligence, and building practical technology solutions.
+
+I enjoy exploring new technologies and developing projects that combine software engineering with real-world problem-solving.
+
+## 📬 Connect With Me
+
+- **Portfolio:** https://hiremeai-three.vercel.app/
+- **LinkedIn:** https://www.linkedin.com/in/karan-deshmukh-cse/
+- **GitHub:** https://github.com/Karanndeshmukh
+- **LeetCode:** https://leetcode.com/u/KaranDeshmukh/
+- **Email:** Karandeshmukh287@gmail.com
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
+
+**Built with ❤️ by Karan Deshmukh**
