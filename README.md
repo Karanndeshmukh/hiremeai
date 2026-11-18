@@ -21,9 +21,6 @@ An interactive, macOS-inspired personal AI portfolio website built with **React*
 * **AI & Data:** Groq API, PyPDF, Requests
 
 #### 📂 Project Structure
-
-text
-
 hiremeai/
 ├── backend/
 │   ├── main.py                     # FastAPI server, resume parser & Groq chat endpoint
@@ -36,33 +33,15 @@ hiremeai/
 ├── pyproject.toml
 └── README.md
 
-Use code with caution.
-
-Copy code text to clipboard.
-
 #### 🚀 Run Locally
 
 #### 1. Clone the Repository
-
-bash
-
 git clone https://github.com/Karanndeshmukh/hiremeai.git
 cd hiremeai
 
-Use code with caution.
-
-Copy code text to clipboard.
-
 #### 2. Start the FastAPI Backend
-
-bash
-
 cd backend
 pip install fastapi uvicorn groq pypdf pydantic python-dotenv requests
-
-Use code with caution.
-
-Copy code text to clipboard.
 
 Create a .env file inside backend/ and add your Groq API key: 
 
